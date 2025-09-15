@@ -43,7 +43,7 @@ const letterSound: Record<string, string> = {
 
 const letters = "abcdefghijklmnopqrstuvwxyz".split("");
 
-export default function LettersPage() {
+export default function LearnPage() {
   const [mode, setMode] = useState<"sound" | "name">("name");
   const [uppercase, setUppercase] = useState(true);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
