@@ -1,5 +1,6 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+import { Link, Outlet, useLocation } from "react-router";
 
 export function Welcome() {
   return (
@@ -25,6 +26,8 @@ export function Welcome() {
               What&apos;s next?
             </p>
             <ul>
+              <Link to="/letters" className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"></Link>
+
               {resources.map(({ href, text, icon }) => (
                 <li key={href}>
                   <a
