@@ -31,9 +31,8 @@ jobs:
           cache: 'npm'
           cache-dependency-path: web/package-lock.json
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
+      
+      
       - name: Install dependencies
         working-directory: ./web
         run: npm ci
@@ -41,6 +40,17 @@ jobs:
       - name: Build
         working-directory: ./web
         run: npm run build
+
+      - name: "Debug: list build output"
+        working-directory: ./web
+        run: |
+          echo "Contents of web (repo root):";
+          ls -la || true;
+          echo "Recursive contents of build:";
+          ls -R build || true;
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
