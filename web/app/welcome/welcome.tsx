@@ -48,7 +48,7 @@ export function Welcome() {
 
 const resources = [
   {
-    href: "/letters",
+    href: "/alphabets/letters",
     text: "Learn alphabets",
     icon: (
       <svg
