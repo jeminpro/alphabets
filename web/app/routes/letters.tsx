@@ -5,7 +5,7 @@ function say(text: string) {
   if (typeof window === "undefined") return;
   const u = new SpeechSynthesisUtterance(text);
   u.rate = 0.9; // calm
-  u.pitch = 1.1;
+  u.pitch = 1;
   u.lang = "en-GB"; // UK voice
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(u);
@@ -15,7 +15,7 @@ function say(text: string) {
 const letterSound: Record<string, string> = {
   a: "a as in apple",
   b: "b as in ball",
-  c: "k as in cat",
+  c: "c as in cat",
   d: "d as in dog",
   e: "e as in egg",
   f: "f as in fish",
@@ -29,7 +29,7 @@ const letterSound: Record<string, string> = {
   n: "n as in nose",
   o: "o as in orange",
   p: "p as in pig",
-  q: "qu as in queen",
+  q: "q as in queen",
   r: "r as in rabbit",
   s: "s as in sun",
   t: "t as in tiger",
@@ -152,7 +152,7 @@ export default function LettersPage() {
       <section className="flex-1 px-4 pb-10">
 
         {/* Letter grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-3 sm:grid-cols-4  md:grid-cols-6 gap-3 mt-5 ">
+        <div className="max-w-6xl mx-auto grid grid-cols-6 gap-2 mt-5 ">
           {letters.map((l, i) => {
             const show = uppercase ? l.toUpperCase() : l;
             const active = activeIndex === i;
