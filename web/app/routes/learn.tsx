@@ -152,7 +152,7 @@ export default function LearnPage() {
       <section className="flex-1 px-4 pb-10">
 
         {/* Letter grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-6 gap-2 mt-5 ">
+        <div className="max-w-6xl mx-auto grid grid-cols-6 md:grid-cols-9 gap-2 mt-5 ">
           {letters.map((l, i) => {
             const show = uppercase ? l.toUpperCase() : l;
             const active = activeIndex === i;
